@@ -1,0 +1,42 @@
+@include mediaMd{
+  html .container, body .container{
+    width:90%;
+  }
+  html header .row, body header .row{
+    padding: 1.4rem 0.5re,;
+  }
+  html header .row #nav, body header .row #nav{
+    width: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    float: none;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    background: #333;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+  }
+  ul{
+    position: relative;
+    width: 100%;
+    text-align: right;
+    top: 25%;
+    padding-top: 60px;
+  }
+  html header .row #nav ul li, body header .row #nav ul li{
+    display: block;
+    margin: 0;
+    padding: 1.4rem 1rem;
+    a{
+      font-size: 1.5rem;
+    }
+  }
+  html header .row #nav ul li:nth-child(1), body header .row #nav ul li:nth-child(1){
+    margin: 0;
+  }
+  html header .row #mobile_nav, body header .row .mobile_nav{
+    display: block;
+  }
+}

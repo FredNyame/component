@@ -1,0 +1,336 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease-in-out;
+  section{
+    height: 100vh;
+    overflow: hidden;
+  }
+  #first{
+    height: 70vh;
+    background: #fafafa;
+  }
+  header{
+    width: 100%;
+    background: linear-gradient(45deg,rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('peter-osmenda-1224266-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+    .row{
+      padding: 1.4rem;
+      .logo{
+        float: left;
+        font-size: 2rem;
+      
+        a{
+          font-weight: 600;
+          color: #ddd;
+          #night{
+            font-weight: 200;
+            color: #fff;
+          }
+        }
+        a:hover{
+          color: #fff;
+        }
+        a:focus{
+          outline: none;
+        }
+      }
+      #nav{
+        //display: none;
+        float: right;
+        padding: 0.5rem;
+        ul{
+          li{
+            display: inline-block;
+            margin-left: 3rem;
+            a{
+              color: #fff;
+            }
+            a:hover{
+              color: #ccc;
+            }
+            a:focus{
+              outline: none;
+            }
+          }
+          li:nth-child(1){
+            margin-left: 0px;
+           } 
+        }
+      }
+      .mobile_nav{
+        float: right;
+        display: none;
+        cursor: pointer;
+        .bar{
+          width:35px;
+          height: 3px;
+          background: #fff;
+          margin: 6px 0;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .change #bar1{
+        transform: rotate(-45deg) translate(-9px,6px);
+      }
+      .change #bar2{
+        opacity: 0;
+      }
+      .change #bar3{
+        transform: rotate(45deg) translate(-6px,-4px)
+      }
+    }
+    .row:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    .banner{
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      #banner_h1{
+        color: #fff;
+        margin: 0;
+        font-size: 3rem;
+      }
+      p{
+        margin-top: 20px;
+        font-size: 1.5rem;
+      }
+      button{
+        margin-top: 40px;
+      }
+    }
+  }
+  .container{
+    width: 80%;
+    margin: 0 auto;
+    h1{
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+      margin: 120px 0px 80px 0px;
+    }
+  }
+  .row{
+    width: 100%;
+  }
+  button{
+    padding: 1.2rem 1.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    background: lightcoral;
+    border: 1px solid lightcoral;
+    cursor: pointer;
+    a{
+      color: #fff;
+    }
+  }
+
+  //Main styling 
+  .main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .column{
+      flex-basis: calc(33% - 20px);
+      p{
+        color: #575757;
+      }
+    }
+  }
+
+    //FAQ styling 
+    .acordion_container{
+      width: 80%;
+      margin: 0 auto;
+    }
+    .accordion{
+      width: 100%;
+      border-radius: 0px;
+      border: 0px;
+      padding: 1.8rem;
+      margin-bottom: 5px;
+      background: #eee;
+      text-align: left;
+      outline: none;
+      transition: all 0.4s ease-in-out;
+
+      &:hover{
+        background: #ccc;
+      }
+      &:focus{
+        outline: none;
+      }
+      &:after{
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+      .active{
+        background: #ccc;
+      }
+      .active:after{
+        content: "\2212";
+      }
+    }
+    .panel{
+      padding: 0rem 0.5rem;
+      color: #575757;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    //Testimonial styling 
+    #test{
+      background: #fafafa;
+     
+    }
+    .textimonial_container{
+      max-width: 800px;
+      position: relative;
+      margin: 0 auto;
+      .prev, .next{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color:#000000;
+        font-weight: bold;
+        font-size: 2rem;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      .next{
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+        color: #fff;
+        background-color: rgba(0,0,0,0.5);
+      }
+    }
+    .fade{
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .2} 
+      to {opacity: 1}
+    }
+
+    .testimonial{
+      max-width: 600px;
+      padding: 5rem 3rem 2rem 3rem;
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      margin: 0 auto;
+      .words{
+        color: #777;
+        margin-bottom: 20px;
+        line-height: 20px;
+        &::before{
+          content: '\201C';
+          font-weight: 600;
+          color: #eee;
+          font-size: 4.5rem;
+        }
+      }
+      .person{
+        display: flex;
+        .avatar{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .person_details{
+          padding: 0.5rem 0px 0px 0px;
+          p{
+            margin: 0;
+            color: #ccc;
+            font-weight: 500;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    //Contact styling 
+    form{
+      max-width: 600px;
+      width: 100%;
+      margin: 100px auto 80px auto;
+      padding: 2.5rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px -10px rgba(0,0,0,0.5);
+      input, textarea{
+        width: 100%;
+        font-size: 0.8rem;
+        border: 1px solid #f7f7f7;
+        padding: 1rem;
+        margin-bottom: 20px;
+        background: #f7f7f7;
+      }
+    }
+
+}
+
+//Mobile Responsive
+//Landscape
+@mixin mediaLG {
+  @media screen and (max-width: 1025px){
+    @content;
+  }
+}
+//Tablet
+@mixin mediaMd {
+  @media screen and (max-width: 769px){
+    @content;
+  }
+}
+
+//mobile
+@mixin mediaSm {
+  @media screen and (max-width: 460px){
+    @content;
+  }
+}
+
+@mixin mediaSx {
+  @media screen and (max-width: 376px){
+    @content;
+  }
+}
+
+//Mobile style
+@import 'mobile';
