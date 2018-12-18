@@ -41,6 +41,7 @@ body header {
 
 html header .row,
 body header .row {
+  position: relative;
   padding: 1.4rem;
 }
 
@@ -106,9 +107,12 @@ body header .row #nav ul li:nth-child(1) {
 
 html header .row .mobile_nav,
 body header .row .mobile_nav {
+  position: absolute;
+  right: 0;
   float: right;
   display: none;
   cursor: pointer;
+  z-index: 2;
 }
 
 html header .row .mobile_nav .bar,

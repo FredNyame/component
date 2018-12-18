@@ -9,13 +9,15 @@ function animateBtn(){
      //show menu
       menuBtn.style.visibility = 'visible';
       menuBtn.style.width = '300px';
-      document.body.style.marginRight = '300px';
+      mobileBtn.style.position = 'fixed';
+      //document.body.style.marginRight = '300px';
 
   } else{
     mobileBtn.classList.remove('change');
     //hide menu
     menuBtn.style.visibility = 'hidden';
-      menuBtn.style.width = '0px';
-      document.body.style.marginRight = '0px';
+    menuBtn.style.width = '0px';
+    mobileBtn.style.position = 'absolute';
+      //document.body.style.marginRight = '0px';
   }
 }

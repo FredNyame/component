@@ -28,6 +28,7 @@ body{
     height: 100vh;
     position: relative;
     .row{
+      position: relative;
       padding: 1.4rem;
       .logo{
         float: left;
@@ -72,9 +73,12 @@ body{
         }
       }
       .mobile_nav{
+        position: absolute;
+        right: 0;
         float: right;
         display: none;
         cursor: pointer;
+        z-index: 2;
         .bar{
           width:35px;
           height: 3px;
