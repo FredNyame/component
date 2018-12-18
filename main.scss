@@ -192,12 +192,12 @@ body{
         float: right;
         margin-left: 5px;
       }
-      .active{
-        background: #ccc;
-      }
-      .active:after{
-        content: "\2212";
-      }
+    }
+    .active{
+      background: #ccc;
+    }
+    .active:after{
+      content: "\2212";
     }
     .panel{
       padding: 0rem 0.5rem;
@@ -250,6 +250,7 @@ body{
     }
 
     .testimonial{
+      display: none;
       max-width: 600px;
       padding: 5rem 3rem 2rem 3rem;
       background: #fafafa;

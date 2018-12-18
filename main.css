@@ -276,13 +276,13 @@ body .accordion:after {
   margin-left: 5px;
 }
 
-html .accordion .active,
-body .accordion .active {
+html .active,
+body .active {
   background: #ccc;
 }
 
-html .accordion .active:after,
-body .accordion .active:after {
+html .active:after,
+body .active:after {
   content: "\2212";
 }
 
@@ -370,6 +370,7 @@ body .fade {
 
 html .testimonial,
 body .testimonial {
+  display: none;
   max-width: 600px;
   padding: 5rem 3rem 2rem 3rem;
   background: #fafafa;
