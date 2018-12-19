@@ -17,7 +17,8 @@ body {
 
 html section,
 body section {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 1rem 0;
   overflow: hidden;
 }
 
@@ -43,6 +44,11 @@ html header .row,
 body header .row {
   position: relative;
   padding: 1.4rem;
+}
+
+html header .row .container,
+body header .row .container {
+  position: relative;
 }
 
 html header .row .logo,
@@ -125,6 +131,11 @@ body header .row .mobile_nav .bar {
   transition: all 0.3s ease-in-out;
 }
 
+html header .row .change,
+body header .row .change {
+  right: 10px;
+}
+
 html header .row .change #bar1,
 body header .row .change #bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
@@ -142,8 +153,8 @@ body header .row .change #bar3 {
           transform: rotate(45deg) translate(-6px, -4px);
 }
 
-html header .row:after,
-body header .row:after {
+html header .container:after,
+body header .container:after {
   content: '';
   display: table;
   clear: both;
@@ -195,6 +206,36 @@ body .container h1 {
 html .row,
 body .row {
   width: 100%;
+}
+
+html .fixed-top .header-row,
+body .fixed-top .header-row {
+  position: fixed;
+  background: #fafafa;
+  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+html .fixed-top .header-row .logo,
+body .fixed-top .header-row .logo {
+  font-size: 1.6rem;
+}
+
+html .fixed-top .header-row .logo a,
+body .fixed-top .header-row .logo a {
+  color: #333;
+}
+
+html .fixed-top .header-row .logo a #night,
+body .fixed-top .header-row .logo a #night {
+  font-weight: 200;
+  color: #5757;
+}
+
+html .fixed-top .header-row .mobile_nav .bar,
+body .fixed-top .header-row .mobile_nav .bar {
+  background: #989898;
 }
 
 html button,
@@ -447,12 +488,24 @@ body form textarea {
   background: #f7f7f7;
 }
 
+.error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-style: italic;
+  margin-bottom: 10px;
+  -webkit-transition: visibility 0.2s ease-in;
+  transition: visibility 0.2s ease-in;
+}
+
 @media screen and (max-width: 769px) {
   html .container, body .container {
     width: 90%;
   }
   html header .row, body header .row {
-    padding: 1.4rem 0.5re;
+    padding: 1.4rem 0.5rem;
   }
   html header .row #nav, body header .row #nav {
     width: 0px;
@@ -473,6 +526,8 @@ body form textarea {
     width: 100%;
     text-align: right;
     top: 25%;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
     padding-top: 60px;
   }
   html header .row #nav ul li, body header .row #nav ul li {

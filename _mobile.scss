@@ -3,7 +3,7 @@
     width:90%;
   }
   html header .row, body header .row{
-    padding: 1.4rem 0.5re,;
+    padding: 1.4rem 0.5rem;
   }
   html header .row #nav, body header .row #nav{
     width: 0px;
@@ -23,6 +23,7 @@
     width: 100%;
     text-align: right;
     top: 25%;
+    transform: translateY(-25%);
     padding-top: 60px;
   }
   html header .row #nav ul li, body header .row #nav ul li{
