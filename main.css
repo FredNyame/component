@@ -9,6 +9,7 @@
 
 html,
 body {
+  position: relative;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
@@ -206,36 +207,6 @@ body .container h1 {
 html .row,
 body .row {
   width: 100%;
-}
-
-html .fixed-top .header-row,
-body .fixed-top .header-row {
-  position: fixed;
-  background: #fafafa;
-  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-html .fixed-top .header-row .logo,
-body .fixed-top .header-row .logo {
-  font-size: 1.6rem;
-}
-
-html .fixed-top .header-row .logo a,
-body .fixed-top .header-row .logo a {
-  color: #333;
-}
-
-html .fixed-top .header-row .logo a #night,
-body .fixed-top .header-row .logo a #night {
-  font-weight: 200;
-  color: #5757;
-}
-
-html .fixed-top .header-row .mobile_nav .bar,
-body .fixed-top .header-row .mobile_nav .bar {
-  background: #989898;
 }
 
 html button,
@@ -488,6 +459,73 @@ body form textarea {
   background: #f7f7f7;
 }
 
+.fixed-top .header-row {
+  position: fixed;
+  background: #fafafa;
+  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.fixed-top .header-row .logo {
+  font-size: 1.6rem;
+}
+
+.fixed-top .header-row .logo a {
+  color: #333;
+}
+
+.fixed-top .header-row .logo a #night {
+  font-weight: 200;
+  color: #5757;
+}
+
+.fixed-top .header-row #nav ul li a {
+  color: #333;
+}
+
+.fixed-top .header-row #nav ul li a:hover {
+  color: #000;
+}
+
+.fixed-top .header-row .mobile_nav .bar {
+  background: #989898;
+}
+
+.overlay {
+  position: fixed;
+  bottom: 10%;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  background: red;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.overlay a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.overlay-show {
+  opacity: 1;
+}
+
+/* @keyframes overlayFade{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+} */
 .error {
   border: 1px solid red;
 }

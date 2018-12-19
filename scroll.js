@@ -2,6 +2,8 @@
 let nav = document.getElementById('header-nav');
 //Top of the element
 let eTop = document.getElementById('first').offsetTop;
+//Get the top arrow
+let topArrow = document.getElementById('top-arrow');
 
 let userScroll = 0;
 let ticking = false;
@@ -31,8 +33,10 @@ function scrollWindow(scrollPos, eTop){
     //stop jerky motion add padding to the body
     //document.body.style.paddingTop = nav.offsetHeight + 'px';
     document.body.classList.add('fixed-top');
+    topArrow.classList.add('overlay-show');
   } else{
     //document.body.style.paddingTop = 0;
     document.body.classList.remove('fixed-top');
+    topArrow.classList.remove('overlay-show');
   }
 }

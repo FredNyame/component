@@ -7,6 +7,7 @@
 }
 html,
 body{
+  position: relative;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.3s ease-in-out;
@@ -144,28 +145,7 @@ body{
   .row{
     width: 100%;
   }
-  //When scroll down styling
-  .fixed-top .header-row{
-    position: fixed;
-    background: #fafafa;
-    box-shadow: 0 5px rgba(0,0,0,0.5);
-    z-index: 1;
-    .logo{
-      font-size: 1.6rem;
-      a{
-        color: #333;
-        #night{
-          font-weight: 200;
-          color: #5757;
-        }
-      }
-    }
-    .mobile_nav{
-      .bar{
-        background: #989898;
-      }
-    }
-  }
+
   //Button Styling 
   button{
     padding: 1.2rem 1.8rem;
@@ -340,6 +320,72 @@ body{
     }
 
 }
+//When scroll down styling
+.fixed-top .header-row{
+  position: fixed;
+  background: #fafafa;
+  box-shadow: 0 5px rgba(0,0,0,0.5);
+  z-index: 1;
+  .logo{
+    font-size: 1.6rem;
+    a{
+      color: #333;
+      #night{
+        font-weight: 200;
+        color: #5757;
+      }
+    }
+  }
+  #nav{
+    ul{
+      li{
+        a{
+          color: #333;
+        }
+        a:hover{
+          color: #000;
+        }
+      }
+    }
+  }
+  .mobile_nav{
+    .bar{
+      background: #989898;
+    }
+  }
+}
+//Top arrow styling
+.overlay{
+  position: fixed;
+  bottom: 10%;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  background: red;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  a{
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+.overlay-show{
+  opacity: 1;
+  //animation: overlayFade 1.5s forwards;
+}
+/* @keyframes overlayFade{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+} */
 
 //Error styling 
 .error{
